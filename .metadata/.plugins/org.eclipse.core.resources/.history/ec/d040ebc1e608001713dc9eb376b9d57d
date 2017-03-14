@@ -1,9 +1,0 @@
-package com.capgemini.summit2017.wcms.bookservice.elastic;
-
-import org.springframework.data.elasticsearch.annotations.Document;
-
-@Document(indexName = "book-index", shards = 1, replicas = 0,
-        refreshInterval = "-1")
-public class Book {
-
-}

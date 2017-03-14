@@ -1,9 +1,0 @@
-eclipse.preferences.version=1
-externalMigrateFromAuthorizationDatabase/isMigrated=true
-migrateFromAuthorizationDatabase/isMigrated=true
-repositories/103f1014b24a00131846a77c6d28dadd=103f1014b24a00131846a77c6d28dadd;http\://svn.codehaus.org/sonar-plugins;http\://svn.codehaus.org/sonar-plugins;branches;tags;trunk;true;d25a0af3-c461-0410-a42d-853a01480fe4;http\://svn.codehaus.org/sonar-plugins;;false;;;0
-repositories/10d5fab0541600141205dd12d85551d3=10d5fab0541600141205dd12d85551d3;http\://svn-salog.int.kn/svn/salog/dbtools;http\://svn-salog.int.kn/svn/salog/dbtools;branches;tags;trunk;true;31ecf72a-1479-440a-80aa-4533294c2230;http\://svn-salog.int.kn/svn/salog;;false;;;0
-repositories/206d0efab13a001513ece7ba982d32d3=206d0efab13a001513ece7ba982d32d3;http\://svn.apache.org/repos/asf/maven/plugin-tools/;http\://svn.apache.org/repos/asf/maven/plugin-tools/;branches;tags;trunk;true;13f79535-47bb-0310-9956-ffa450edef68;http\://svn.apache.org/repos/asf;;false;;;0
-repositories/70d1f18a862d00161620a2e2639dabc5=70d1f18a862d00161620a2e2639dabc5;svn\://svn-salog.int.kn/salog/essentials/sonarqube/sonar-sonargraph;svn\://svn-salog.int.kn/salog/essentials/sonarqube/sonar-sonargraph;branches;tags;trunk;true;31ecf72a-1479-440a-80aa-4533294c2230;svn\://svn-salog.int.kn/salog;;false;;;0
-repositories/f0a875f55fe9001216f6fd2bbb00236f=f0a875f55fe9001216f6fd2bbb00236f;svn\://svn-salog.int.kn/salog/;svn\://svn-salog.int.kn/salog/;branches;tags;trunk;true;31ecf72a-1479-440a-80aa-4533294c2230;svn\://svn-salog.int.kn/salog;;false;;;0
-synch_info/contigous=true
