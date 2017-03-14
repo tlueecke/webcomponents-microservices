@@ -1,0 +1,13 @@
+spring:
+    data:
+        elasticsearch:
+            properties:
+                path.home: elastic/
+
+server:
+  port: ${PORT:2000}
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER:http://localhost:8761}/eureka/
