@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+org.eclipse.debug.ui.ExpressionView.org.eclipse.jdt.debug.ui.show_null_entries=true
+org.eclipse.debug.ui.VariableView.org.eclipse.jdt.debug.ui.show_null_entries=true
+org.eclipse.jdt.debug.ui.detail_formatters=com.kn.db.updater.UpdateScript,getFilename().getFileName() + " (ID\: " + getId() + ")",1,com.kn.mergeinfochecker.ReportedChangeLogEntry,"Missing merge - rev\: " + getRevision() + "\u0000 issue\: " + getMissingMergeIssueKey()\r\n,1,com.kn.salog.changelog.model.ChangeLogEntry,getRevision() + "[" + getTicketKey() + "] (" + getDate() + ")",1,com.kn.tdtools.model.ResolvedType,getValue().getFullyQualifiedName(),1,com.kn.salog.resourcescleaner.ResourcesCleaner,getResources().getComponentName(),1,org.sonar.batch.index.Bucket,measuresByMetric.keySet(),1,com.kn.salog.fwcore.shipment.knielog.commons.dts.KnieUpdateDts,getKnieLog().getField(),1
+org.eclipse.jdt.debug.ui.javaDebug.alertHCRFailed=false
+org.eclipse.jdt.debug.ui.prompt_unable_to_install_breakpoint=false

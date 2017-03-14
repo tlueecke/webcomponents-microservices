@@ -1,0 +1,20 @@
+package com.capgemini.summit2017.wcms.bookservice.jpa;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpMethod;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+@Service
+public class ElasticService {
+
+    @Autowired
+    private RestTemplate restTemplate;
+
+    @Async
+    public void publishBook(Book book) {
+        restTemplate.exchange("http://book-service-elastic/books", HttpMethod.POST, null, Book.class, book);
+    }
+
+}

@@ -1,0 +1,12 @@
+package com.capgemini.summit2017.wcms.bookservice.jpa;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class JpaBookServiceApplicatoin {
+
+	public static void main(String[] args) {
+		SpringApplication.run(JpaBookServiceApplicatoin.class, args);
+	}
+}

@@ -1,0 +1,7 @@
+checkUpdates=false
+eclipse.preferences.version=1
+excludedFolders=**/target;
+fuzzySearchAuto=false
+indexArchives=true
+shownView=true
+version=1.5.6

@@ -1,0 +1,36 @@
+package com.capgemini.summit2017.wcms.bookservice.jpa;
+
+/**
+ * Value object needed in order to resolve circular dependency in spring boot between the entity, the feign client and the repository implementation
+ */
+public class BookDto {
+
+    private final Integer id;
+    private final String title;
+    private final String description;
+    private final String author;
+
+    public BookDto(Integer id, String title, String description, String author) {
+        super();
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.author = author;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+}

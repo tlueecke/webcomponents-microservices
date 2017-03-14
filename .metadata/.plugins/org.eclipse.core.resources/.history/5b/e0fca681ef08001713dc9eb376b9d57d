@@ -1,0 +1,37 @@
+package com.capgemini.summit2017.wcms.bookservice.jpa;
+
+import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
+
+public class JpaBookRepositoryImpl extends SimpleJpaRepository implements JpaBookRepository {
+
+    @Override
+    public void delete(Integer arg0) {
+        // TODO(tlueecke) provide sensible implementation
+
+    }
+
+    @Override
+    public void delete(Book arg0) {
+        // TODO(tlueecke) provide sensible implementation
+
+    }
+
+    @Override
+    public boolean exists(Integer arg0) {
+        // TODO(tlueecke) provide sensible implementation
+        return false;
+    }
+
+    @Override
+    public Book findOne(Integer arg0) {
+        // TODO(tlueecke) provide sensible implementation
+        return null;
+    }
+
+    @Override
+    public <S extends Book> S save(S arg0) {
+        // TODO(tlueecke) provide sensible implementation
+        return null;
+    }
+
+}

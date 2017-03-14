@@ -1,0 +1,9 @@
+package com.capgemini.summit2017.wcms.bookservice.jpa;
+
+import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class JpaBookRepositoryImpl extends SimpleJpaRepository implements JpaBookRepository {
+
+}

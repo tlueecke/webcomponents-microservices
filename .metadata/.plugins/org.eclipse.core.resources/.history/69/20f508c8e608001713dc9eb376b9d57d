@@ -1,0 +1,11 @@
+package com.capgemini.summit2017.wcms.bookservice.elastic;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.elasticsearch.annotations.Document;
+
+@Document(indexName = "book-index")
+public class Book {
+    
+    @Id
+    private Integer id;
+}

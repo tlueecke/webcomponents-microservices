@@ -1,0 +1,14 @@
+package com.capgemini.summit2017.wcms.bookservice.jpa;
+
+import javax.ws.rs.Path;
+
+import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+@FeignClient(name = "book-service-elastic")
+public interface ElasticService {
+
+    @RequestMapping(method = RequestMethod.POST, value = "/books")
+    Book publishBook(@Path Book book);
+}
