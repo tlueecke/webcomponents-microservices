@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Angular2 Client using Polymer Microservice components</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">  
+  
+  <!-- Polymer integration -->
+  <script src="assets/bower_components/webcomponentsjs/webcomponents.min.js"></script>
+  <script>
+    window.Polymer = {
+      dom: 'shadow'
+    };
+  </script>
+  <link rel="import" href="assets/bower_components/polymer/polymer.html">
+  <link rel="import" href="assets/bower_components/iron-ajax/iron-ajax.html">
+  <link rel="import" href="assets/bower_components/paper-material/paper-material.html">
+  <link rel="import" href="assets/bower_components/paper-input/paper-input.html">
+  <link rel="import" href="assets/bower_components/paper-button/paper-button.html">
+  <link rel="import" href="assets/bower_components/paper-toast/paper-toast.html">
+  <link rel="import" href="components/tc-books.html">
+  <link rel="import" href="components/tc-book-form.html">
+</head>
+<body>
+  <app-root>Loading...</app-root>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "summit2017-wc-mc-ng-client",
+  "description": "",
+  "main": "",
+  "authors": [
+    "tlueecke <tim.lueecke>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/tlueecke/webcomponents-microservices",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "iron-ajax": "^1.4.3",
+    "paper-input": "^1.1.23",
+    "paper-toast": "^1.3.0",
+    "paper-button": "^1.0.14",
+    "paper-material": "^1.0.6"
+  }
+}
