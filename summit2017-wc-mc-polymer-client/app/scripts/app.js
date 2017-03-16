@@ -12,7 +12,7 @@
     var tcBooks = document.querySelector('#tc-books');
     var tcBookForm = document.querySelector('#tc-book-form');
     tcBooks.addEventListener('openBook', function(e) {
-      tcBookForm.open(e.detail._id);
+      tcBookForm.open(e.detail.id);
     });
     tcBooks.addEventListener('newBook', function(e) {
       tcBookForm.open(0);

@@ -30,7 +30,7 @@
             <form id="form">
                 <paper-input id="_id"
                              label="ID"
-                             value="{{_data._id}}"
+                             value="{{_data.id}}"
                              auto-validate
                              pattern="[1-9][0-9]*"
                              required
@@ -74,7 +74,8 @@
             properties: {
                 requestUrl: {
                     type: String,
-                    value: '/api/v1/books'
+                    value: '/books',
+                    reflectToAttribute: true
                 },
                 errorText: {
                     type: String,
@@ -95,7 +96,7 @@
             },
             open: function(bookId) {
                 if (bookId > 0) {
-                    this.$.getAjax.url = this.requestUrl + '/_id/' + bookId;
+                    this.$.getAjax.url = this.requestUrl + '/' + bookId;
                     this.$.getAjax.generateRequest();
                     this.$.delete.hidden = false;
                 } else {
@@ -118,11 +119,12 @@
                 if (this.$.form.checkValidity()) {
                     // This is a workaround.
                     // _id should be sent as number
-                    this.set('_data._id', parseInt(this._data._id));
+                    this.set('_data.id', parseInt(this._data.id));
                     if (this._data.description == undefined) {
                         this._data.description = '';
                     }
                     // iron-ajax does not stringify object
+                    this.$.putAjax.url = this.requestUrl + '/' + this._data.id
                     this.$.putAjax.body = JSON.stringify(this._data);
                     this.$.putAjax.generateRequest();
                 } else {
