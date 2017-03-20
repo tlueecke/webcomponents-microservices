@@ -2,9 +2,25 @@
     <head>
         <title>Books store</title>
         <link rel="import" href="http://localhost:3000/books-component.html"/>
+        <script>
+            function logAllElements() {
+                var h3Elements = document.getElementsByTagName('h3');
+                for (var i=0; i<h3Elements.length;i++) {
+                    console.log(h3Elements.item(i));
+                }
+            }
+        </script>
+        <style>
+            h2 {
+                color: red;
+            }
+            h3 {
+                color: blue;
+            }
+        </style>
     </head>
     <body>
-        <h1>Framing application transcluding the books list</h1>
+        <h1 onclick='logAllElements()'>Framing application transcluding the books list</h1>
         <tc-books />
     </body>
 </html>

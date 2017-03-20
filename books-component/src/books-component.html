@@ -3,7 +3,7 @@
         <script src='https://code.jquery.com/jquery-3.2.0.min.js'></script>
     </head>
     <body>
-        <h1 id='testing'>Test</h1>
+        <!--  HTML Templates to be used for our web component -->
         <template id="booksListTemplate">
             <script>
                 function openBook(elem) {
@@ -22,6 +22,8 @@
             <h3 id='book' onclick="openBook(this)">
             </h3>
         </template>
+
+        <!-- Script for creating the custom element with logic applied to it -->
         <script>
             var currentScript = document.currentScript;
             class BooksComponent extends HTMLElement {
@@ -30,26 +32,35 @@
                     super();
                 } 
 
+                // called when element has been connected to transcluding document
                 connectedCallback(){
+                    // keeping the scope of this HTML element for asynchronous callback
                     var elem = this;
+                    // fetching the templates from the owner document, document points to transcluding document at time of transclusion
                     var ownerDocument = currentScript.ownerDocument;
                     var listTemplate = ownerDocument.getElementById('booksListTemplate');
                     var bookTemplate = ownerDocument.getElementById('bookTemplate');
+                    // asynchronous
                     $.ajax({url:'http://localhost:2000/books'}).done(function (data) {
+                        // using the container template
                         var listContainer = document.importNode(listTemplate.content, true);
                         var list = listContainer.querySelector('#booksList');
-
+                        // going through the returned books
                         var books = data._embedded.books;
-                        var booksList = '';
                         for (var i=0; i < books.length; i++) {
+                            // using template for ea ch book
                             var book = document.importNode(bookTemplate.content, true);
+                            // inserting the data
                             var bookElem = book.querySelector('#book');
                             bookElem.innerHTML = books[i].title; 
                             bookElem.setAttribute('books-id', books[i].id);
                             list.appendChild(bookElem);
                         }
+                        // Creating the shadow root
                         var shadowRoot = elem.attachShadow({mode:'closed'})
                         shadowRoot.appendChild(listContainer);
+                        // comment out above and uncomment below to see what shadowRoot does
+                        //elem.appendChild(listContainer);
                     });
                 }
             }
