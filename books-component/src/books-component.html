@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <script src='https://code.jquery.com/jquery-3.2.0.min.js'></script>
+    </head>
+    <body>
+        <h1 id='testing'>Test</h1>
+        <template id="booksListTemplate">
+            <script>
+                function openBook(elem) {
+                    $.ajax({url: 'http://localhost:4000/books/' + elem.getAttribute('books-id')})
+                        .done(function(data) {
+                            console.log(data);
+                            elem.innerHTML = elem.innerHTML + '<p>' + data.description + ' by ' + data.author + '</p>';
+                        });
+                }
+            </script>
+            <h2>Books List</h2>
+            <div id='booksList'>
+            </div>
+        </template>
+        <template id="bookTemplate">
+            <h3 id='book' onclick="openBook(this)">
+            </h3>
+        </template>
+        <script>
+            var currentScript = document.currentScript;
+            class BooksComponent extends HTMLElement {
+
+                constructor() {
+                    super();
+                } 
+
+                connectedCallback(){
+                    var elem = this;
+                    var ownerDocument = currentScript.ownerDocument;
+                    var listTemplate = ownerDocument.getElementById('booksListTemplate');
+                    var bookTemplate = ownerDocument.getElementById('bookTemplate');
+                    $.ajax({url:'http://localhost:2000/books'}).done(function (data) {
+                        var listContainer = document.importNode(listTemplate.content, true);
+                        var list = listContainer.querySelector('#booksList');
+
+                        var books = data._embedded.books;
+                        var booksList = '';
+                        for (var i=0; i < books.length; i++) {
+                            var book = document.importNode(bookTemplate.content, true);
+                            var bookElem = book.querySelector('#book');
+                            bookElem.innerHTML = books[i].title; 
+                            bookElem.setAttribute('books-id', books[i].id);
+                            list.appendChild(bookElem);
+                        }
+                        var shadowRoot = elem.attachShadow({mode:'closed'})
+                        shadowRoot.appendChild(listContainer);
+                    });
+                }
+            }
+            window.customElements.define('tc-books', BooksComponent);
+        </script>
+    </body>
+</html>
+

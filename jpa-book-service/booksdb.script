@@ -45,8 +45,4 @@ GRANT DBA TO SA
 SET SCHEMA SYSTEM_LOBS
 INSERT INTO BLOCKS VALUES(0,2147483647,0)
 SET SCHEMA PUBLIC
-INSERT INTO BOOK VALUES(2,'Sick Bastard','Sich bastard don''t gives a fuck','WTF')
-INSERT INTO BOOK VALUES(5,'this ','works','If')
-INSERT INTO BOOK VALUES(6,'ever','give up','Never2')
-INSERT INTO BOOK VALUES(8,'give','up','Never')
-INSERT INTO BOOK VALUES(15,'Aut','Book descr','Some')
+INSERT INTO BOOK VALUES(2,'Silent Bob','','The downfall of monoliths')
